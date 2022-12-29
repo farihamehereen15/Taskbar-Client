@@ -1,0 +1,28 @@
+import React, { useContext } from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import { Toaster } from 'react-hot-toast';
+import { themeContext, ThemeProvider } from './Context/Context';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// const theme = useContext(themeContext);
+// const darkMode = theme.state.darkMode;
+
+
+root.render(
+
+  <React.StrictMode>
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
+    <Toaster />
+  </React.StrictMode>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
